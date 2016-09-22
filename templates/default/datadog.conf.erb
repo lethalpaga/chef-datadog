@@ -33,6 +33,9 @@ collect_ec2_tags: <%= node['datadog']['collect_ec2_tags'] %>
 <% if node['datadog']['web_proxy']['host'] -%>
 proxy_host: <%= node['datadog']['web_proxy']['host'] %>
 proxy_port: <%= node['datadog']['web_proxy']['port'] %>
+<% end -%>
+
+<% if node['datadog']['web_proxy']['user'] -%>
 proxy_user: <%= node['datadog']['web_proxy']['user'] %>
 proxy_password: <%= node['datadog']['web_proxy']['password'] %>
 <% end -%>
